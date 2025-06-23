@@ -11,7 +11,10 @@ module.exports = {
     ...sharedConfig,
     connection: { filename: './data/database.db3' },
     seeds: { directory: './data/seeds' },
+    migrations:{ directory:'./data/migrations'},
+    useNullAsDefault: true,
   },
+  
   testing: {
     ...sharedConfig,
     connection: { filename: './data/test.db3' },
