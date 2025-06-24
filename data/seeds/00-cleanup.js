@@ -5,4 +5,4 @@ exports.seed = function (knex){
         mode: ' truncate',
         ignoreTable: ['knex_migrations', 'knex_migrations_lock'],
     })
-}                    
+}
