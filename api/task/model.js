@@ -4,7 +4,7 @@ const db = require('../../data/dbConfig')
 
 const getAll = () =>{
      return db('tasks as t')
-    .leftJoin('projects as p','t.task_id','p.project_id')
+    .leftJoin('projects as p','t.project_id','p.project_id')
     .select( 
         't.task_id',
         't.task_description',

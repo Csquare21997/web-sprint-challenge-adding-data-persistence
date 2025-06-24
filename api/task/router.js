@@ -10,7 +10,7 @@ router.get('/', async (req, res, next)=>{
             ...task,
             task_completed: !!task.task_completed
         }))
-        
+        console.log('hey taskloop',taskloop)
         
         res.json(taskloop )
     } catch(err){
@@ -18,9 +18,9 @@ router.get('/', async (req, res, next)=>{
     }
     
 })
-router.get('/:resource_id', async (req, res, next)=>{
+router.get('/:task_id', async (req, res, next)=>{
     try{
-        const task = await Task.getById(req.params.resource_id)
+        const task = await Task.getById(req.params.task_id)
         res.json(task)
     } catch(err){
         next(err)
